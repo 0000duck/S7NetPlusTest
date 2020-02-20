@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S7NetPlusTest", "S7NetPlusTest\S7NetPlusTest.csproj", "{413350B1-2C33-448A-A852-AC0044148CD4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S7.Net", "S7.Net\S7.Net.csproj", "{5611756C-F892-4C44-BB22-37A8948E4389}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S7.Net", "S7.Net\S7.Net.csproj", "{72472818-B15F-460B-A0E6-7DAD6982F61B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{413350B1-2C33-448A-A852-AC0044148CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{413350B1-2C33-448A-A852-AC0044148CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{413350B1-2C33-448A-A852-AC0044148CD4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5611756C-F892-4C44-BB22-37A8948E4389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5611756C-F892-4C44-BB22-37A8948E4389}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5611756C-F892-4C44-BB22-37A8948E4389}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5611756C-F892-4C44-BB22-37A8948E4389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72472818-B15F-460B-A0E6-7DAD6982F61B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72472818-B15F-460B-A0E6-7DAD6982F61B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72472818-B15F-460B-A0E6-7DAD6982F61B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72472818-B15F-460B-A0E6-7DAD6982F61B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

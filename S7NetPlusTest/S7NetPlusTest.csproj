@@ -82,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\S7.Net\S7.Net.csproj">
-      <Project>{5611756c-f892-4c44-bb22-37a8948e4389}</Project>
+      <Project>{72472818-b15f-460b-a0e6-7dad6982f61b}</Project>
       <Name>S7.Net</Name>
     </ProjectReference>
   </ItemGroup>
