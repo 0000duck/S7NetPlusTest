@@ -1,3 +1,36 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
-[assembly: InternalsVisibleTo("S7Net.UnitTest, PublicKey=00240000048000009400000006020000002400005253413100040000010001002d1032db55f60d64bf90ea1cc2247b5a8b9b6168a07bcd464a07ce2e425d027ff9409a64ba0e3f37718e14c50cf964d0d921e5ae8b8d74bd8a82431794f897cebf0ee668feb2ccd030153611b2808fcb7785c5e5136a98e0ec23de3c1ed385d2026c26e4bed5805ff9db7e0544f59b1f19d369d43403a624586795926e38c48d")]
+// 有关程序集的一般信息由以下
+// 控制。更改这些特性值可修改
+// 与程序集关联的信息。
+[assembly: AssemblyTitle("S7.Net")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("S7.Net")]
+[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+// 将 ComVisible 设置为 false 会使此程序集中的类型
+//对 COM 组件不可见。如果需要从 COM 访问此程序集中的类型
+//请将此类型的 ComVisible 特性设置为 true。
+[assembly: ComVisible(false)]
+
+// 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
+[assembly: Guid("b733770d-c4d0-4d9c-92b2-fb1bf906d09d")]
+
+// 程序集的版本信息由下列四个值组成: 
+//
+//      主版本
+//      次版本
+//      生成号
+//      修订号
+//
+// 可以指定所有值，也可以使用以下所示的 "*" 预置版本号和修订号
+//通过使用 "*"，如下所示:
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

@@ -7,6 +7,7 @@
         private int startByte;
         private int bitNumber;
         private VarType varType;
+        private int count;
 
         public DataType DataType
         {
@@ -38,15 +39,22 @@
             set => varType = value;
         }
 
-        public PLCAddress(string address)
+        public int Count
         {
-            Parse(address, out dataType, out dbNumber, out varType, out startByte, out bitNumber);
+            get => count;
+            set => count = value;
         }
 
-        public static void Parse(string input, out DataType dataType, out int dbNumber, out VarType varType, out int address, out int bitNumber)
+        public PLCAddress(string address)
+        {
+            Parse(address, out dataType, out dbNumber, out varType, out startByte, out bitNumber,out count);
+        }
+
+        public static void Parse(string input, out DataType dataType, out int dbNumber, out VarType varType, out int address, out int bitNumber,out int count)
         {
             bitNumber = -1;
             dbNumber = 0;
+            count = 1;
 
             switch (input.Substring(0, 2))
             {
@@ -73,9 +81,17 @@
                             return;
                         case "DBX":
                             bitNumber = int.Parse(strings[2]);
+                            if (strings.Length < 3)
+                                throw new InvalidAddressException("To few periods for DB Bit address");
                             if (bitNumber > 7)
                                 throw new InvalidAddressException("Bit can only be 0-7");
                             varType = VarType.Bit;
+                            return;
+                        case "DBC":
+                            varType = VarType.String;
+                            if (strings.Length < 3)
+                                throw new InvalidAddressException("To few periods for DB String address");
+                            count = int.Parse(strings[2]);
                             return;
                         default:
                             throw new InvalidAddressException();

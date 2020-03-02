@@ -45,9 +45,9 @@
             this.txtIp.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtIp.Location = new System.Drawing.Point(85, 89);
             this.txtIp.Name = "txtIp";
-            this.txtIp.Size = new System.Drawing.Size(160, 31);
+            this.txtIp.Size = new System.Drawing.Size(208, 31);
             this.txtIp.TabIndex = 0;
-            this.txtIp.Text = "192.168.1.100";
+            this.txtIp.Text = "192.168.1.20";
             // 
             // label1
             // 
@@ -62,7 +62,7 @@
             // btn_connect
             // 
             this.btn_connect.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_connect.Location = new System.Drawing.Point(284, 89);
+            this.btn_connect.Location = new System.Drawing.Point(361, 89);
             this.btn_connect.Name = "btn_connect";
             this.btn_connect.Size = new System.Drawing.Size(88, 31);
             this.btn_connect.TabIndex = 2;
@@ -85,9 +85,9 @@
             this.txt_addr.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txt_addr.Location = new System.Drawing.Point(85, 138);
             this.txt_addr.Name = "txt_addr";
-            this.txt_addr.Size = new System.Drawing.Size(160, 31);
+            this.txt_addr.Size = new System.Drawing.Size(208, 31);
             this.txt_addr.TabIndex = 4;
-            this.txt_addr.Text = "DB1.DBW0";
+            this.txt_addr.Text = "DB2000.DBC10.30";
             // 
             // label2
             // 
@@ -104,14 +104,14 @@
             this.txt_val.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txt_val.Location = new System.Drawing.Point(85, 195);
             this.txt_val.Name = "txt_val";
-            this.txt_val.Size = new System.Drawing.Size(160, 31);
+            this.txt_val.Size = new System.Drawing.Size(208, 31);
             this.txt_val.TabIndex = 6;
             this.txt_val.Text = "0";
             // 
             // btn_read
             // 
             this.btn_read.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_read.Location = new System.Drawing.Point(284, 138);
+            this.btn_read.Location = new System.Drawing.Point(361, 138);
             this.btn_read.Name = "btn_read";
             this.btn_read.Size = new System.Drawing.Size(88, 31);
             this.btn_read.TabIndex = 7;
@@ -122,7 +122,7 @@
             // btn_write
             // 
             this.btn_write.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_write.Location = new System.Drawing.Point(284, 195);
+            this.btn_write.Location = new System.Drawing.Point(361, 195);
             this.btn_write.Name = "btn_write";
             this.btn_write.Size = new System.Drawing.Size(88, 31);
             this.btn_write.TabIndex = 8;
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 321);
+            this.ClientSize = new System.Drawing.Size(511, 321);
             this.Controls.Add(this.lbMsg);
             this.Controls.Add(this.btn_write);
             this.Controls.Add(this.btn_read);

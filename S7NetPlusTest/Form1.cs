@@ -70,7 +70,8 @@ namespace S7NetPlusTest
                 lbMsg.Text = "写入中";
 
                 List<DataItem> dataItems = new List<DataItem>();
-                var item = DataItem.FromAddressAndValue<string>(txt_addr.Text, txt_val.Text);
+                var item = DataItem.FromAddressAndValue(txt_addr.Text,txt_val.Text);
+
                 dataItems.Add(item);
 
                 _plc.Write(dataItems.ToArray());

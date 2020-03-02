@@ -60,7 +60,7 @@ namespace S7.Net.Types
         public static DataItem FromAddress(string address)
         {
             PLCAddress.Parse(address, out var dataType, out var dbNumber, out var varType, out var startByte,
-                out var bitNumber);
+                out var bitNumber,out var count);
 
             return new DataItem
             {
@@ -68,7 +68,8 @@ namespace S7.Net.Types
                 DB = dbNumber,
                 VarType = varType,
                 StartByteAdr = startByte,
-                BitAdr = (byte) (bitNumber == -1 ? 0 : bitNumber)
+                BitAdr = (byte) (bitNumber == -1 ? 0 : bitNumber),
+                Count= count
             };
         }
 
@@ -85,6 +86,45 @@ namespace S7.Net.Types
 
             if (typeof(T).IsArray) dataItem.Count = ((Array) dataItem.Value).Length;
 
+            return dataItem;
+        }
+
+
+        public static DataItem FromAddressAndValue(string address, string value)
+        {
+            if (string.IsNullOrEmpty(value)) throw new ArgumentNullException("value");
+            var dataItem = FromAddress(address);
+
+            switch (dataItem.VarType) {
+                case VarType.Bit:
+                    if (value.ToUpper() == "FALSE" || value == "0")
+                    {
+                        dataItem.Value = 0;
+                    }
+                    else {
+                        dataItem.Value = 1;
+                    }
+                    break;
+                case VarType.Byte:
+                    dataItem.Value= Convert.ToByte(value);
+                    break;
+                case VarType.Word:
+                    dataItem.Value = Convert.ToInt16(value);
+                    break;
+                case VarType.DWord:
+                    dataItem.Value = Convert.ToUInt32(value);
+                    break;
+                case VarType.Real:
+                    dataItem.Value = Convert.ToDouble(value);
+                    break;
+                case VarType.String:
+                    dataItem.Value = value;
+                    break;
+                default:
+                    dataItem.Value = value;
+                    break;
+            }
+            
             return dataItem;
         }
     }
