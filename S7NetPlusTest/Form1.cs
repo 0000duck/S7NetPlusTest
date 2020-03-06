@@ -18,21 +18,18 @@ namespace S7NetPlusTest
         private void btn_connect_Click(object sender, EventArgs e)
         {
             try
-            {
-                if (_plc == null)
+            {            
+                if (string.IsNullOrEmpty(cb_ip.Text))
                 {
-                    lbMsg.Text = "连接中";
-                    _plc = new Plc(CpuType.S71200, txtIp.Text, 0, 1);
-                    _plc.Open();
-                    lbMsg.Text = "连接成功";
+                    lbMsg.Text = "请输入IP";
+                    return;
                 }
-                else
-                {
-                    lbMsg.Text = "断开中";
-                    _plc.Close();
-                    _plc = null;
-                    lbMsg.Text = "断开成功";
-                }
+
+                lbMsg.Text = "连接中";
+                _plc = new Plc(CpuType.S71200, cb_ip.Text, 0, 1);
+
+                lbMsg.Text = "连接成功";
+                
             }
             catch (PlcException ex)
             {
@@ -44,14 +41,26 @@ namespace S7NetPlusTest
         {
             try
             {
+                if (_plc == null)
+                {
+                    lbMsg.Text = "请先连接";
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(cb_addr.Text))
+                {
+                    lbMsg.Text = "请输入地址";
+                    return;
+                }
+
                 lbMsg.Text = "读取中";
 
                 List<DataItem> dataItems = new List<DataItem>();
-                var item = DataItem.FromAddress(txt_addr.Text);
+                var item = DataItem.FromAddress(cb_addr.Text);
                 dataItems.Add(item);
-
+                _plc.Open();
                 _plc.ReadMultipleVars(dataItems);
-
+                _plc.Close();
                 var result = dataItems.First().Value.ToString();
 
                 lbMsg.Text = result;
@@ -67,15 +76,33 @@ namespace S7NetPlusTest
         {
             try
             {
+                if (_plc == null)
+                {
+                    lbMsg.Text = "请先连接";
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(cb_addr.Text))
+                {
+                    lbMsg.Text = "请输入地址";
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txt_val.Text))
+                {
+                    lbMsg.Text = "请输入数据";
+                    return;
+                }
+
                 lbMsg.Text = "写入中";
 
                 List<DataItem> dataItems = new List<DataItem>();
-                var item = DataItem.FromAddressAndValue(txt_addr.Text,txt_val.Text);
+                var item = DataItem.FromAddressAndValue(cb_addr.Text, txt_val.Text);
 
                 dataItems.Add(item);
-
+                _plc.Open();
                 _plc.Write(dataItems.ToArray());
-
+                _plc.Close();
                 lbMsg.Text = "写入成功";
             }
             catch (PlcException ex)

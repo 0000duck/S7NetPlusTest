@@ -28,26 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtIp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_connect = new System.Windows.Forms.Button();
             this.地址 = new System.Windows.Forms.Label();
-            this.txt_addr = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_val = new System.Windows.Forms.TextBox();
             this.btn_read = new System.Windows.Forms.Button();
             this.btn_write = new System.Windows.Forms.Button();
             this.lbMsg = new System.Windows.Forms.Label();
+            this.cb_ip = new System.Windows.Forms.ComboBox();
+            this.cb_addr = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // txtIp
-            // 
-            this.txtIp.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtIp.Location = new System.Drawing.Point(85, 89);
-            this.txtIp.Name = "txtIp";
-            this.txtIp.Size = new System.Drawing.Size(208, 31);
-            this.txtIp.TabIndex = 0;
-            this.txtIp.Text = "192.168.1.20";
             // 
             // label1
             // 
@@ -79,15 +70,6 @@
             this.地址.Size = new System.Drawing.Size(73, 21);
             this.地址.TabIndex = 3;
             this.地址.Text = "地址：";
-            // 
-            // txt_addr
-            // 
-            this.txt_addr.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_addr.Location = new System.Drawing.Point(85, 138);
-            this.txt_addr.Name = "txt_addr";
-            this.txt_addr.Size = new System.Drawing.Size(208, 31);
-            this.txt_addr.TabIndex = 4;
-            this.txt_addr.Text = "DB2000.DBC10.30";
             // 
             // label2
             // 
@@ -139,21 +121,46 @@
             this.lbMsg.TabIndex = 9;
             this.lbMsg.Text = "……";
             // 
+            // cb_ip
+            // 
+            this.cb_ip.FormattingEnabled = true;
+            this.cb_ip.Items.AddRange(new object[] {
+            "192.168.1.10",
+            "192.168.1.20",
+            "192.168.1.30"});
+            this.cb_ip.Location = new System.Drawing.Point(85, 99);
+            this.cb_ip.Name = "cb_ip";
+            this.cb_ip.Size = new System.Drawing.Size(208, 20);
+            this.cb_ip.TabIndex = 10;
+            // 
+            // cb_addr
+            // 
+            this.cb_addr.FormattingEnabled = true;
+            this.cb_addr.Items.AddRange(new object[] {
+            "DB2000.DBW2",
+            "DB2000.DBW4",
+            "DB2000.DBC42.50",
+            "DB2000.DBC94.50"});
+            this.cb_addr.Location = new System.Drawing.Point(85, 148);
+            this.cb_addr.Name = "cb_addr";
+            this.cb_addr.Size = new System.Drawing.Size(208, 20);
+            this.cb_addr.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 321);
+            this.Controls.Add(this.cb_addr);
+            this.Controls.Add(this.cb_ip);
             this.Controls.Add(this.lbMsg);
             this.Controls.Add(this.btn_write);
             this.Controls.Add(this.btn_read);
             this.Controls.Add(this.txt_val);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_addr);
             this.Controls.Add(this.地址);
             this.Controls.Add(this.btn_connect);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtIp);
             this.Name = "Form1";
             this.Text = "S7NetPlusTest";
             this.ResumeLayout(false);
@@ -162,17 +169,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtIp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_connect;
         private System.Windows.Forms.Label 地址;
-        private System.Windows.Forms.TextBox txt_addr;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_val;
         private System.Windows.Forms.Button btn_read;
         private System.Windows.Forms.Button btn_write;
         private System.Windows.Forms.Label lbMsg;
+        private System.Windows.Forms.ComboBox cb_ip;
+        private System.Windows.Forms.ComboBox cb_addr;
     }
 }
 
