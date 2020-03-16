@@ -87,6 +87,9 @@
                                 throw new InvalidAddressException("Bit can only be 0-7");
                             varType = VarType.Bit;
                             return;
+                        case "DBR":
+                            varType = VarType.Real;
+                            return;
                         case "DBC":
                             varType = VarType.String;
                             if (strings.Length < 3)
